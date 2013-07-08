@@ -3,6 +3,48 @@
 
 
 
+
+
+
+/*
+// メモ帳
+import groovy.swing.SwingBuilder
+import javax.swing.*
+ 
+def notepad
+new SwingBuilder().frame(
+  title: "メモ帳",
+  defaultCloseOperation: JFrame.EXIT_ON_CLOSE,
+  size: [800, 600],
+  show: true,
+  locationRelativeTo: null)
+{
+  menuBar()
+  {
+    menu(text: "ファイル(F)", mnemonic: 'F')
+    {
+      menuItem(
+        text: "名前をつけて保存(A)...",
+        mnemonic: 'A',
+        actionPerformed:
+        {
+          fc = new JFileChooser()
+          if (fc.showSaveDialog(null) == JFileChooser.APPROVE_OPTION)
+          {
+            fc.selectedFile.text = notepad.text
+          }
+        }
+      )
+      
+      menuItem(text: "終了(X)", mnemonic: 'X', actionPerformed: { System.exit(0) })
+    }
+  }
+  
+  scrollPane() { notepad = textArea() }
+}
+*/
+
+
 /*
 // クロージャテスト
 def str = "clojure"
