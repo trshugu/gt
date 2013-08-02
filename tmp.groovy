@@ -2,8 +2,8 @@
 */
 
 
-
-// sb‚Æ+‚Ì‘¬“x‚Ì”äŠr‚Å‘½‚¢‚Ù‚¤
+/*
+// sb‚Æ+‚Ì‘¬“x‚Ì”äŠr‚Å‘½‚¢‚Ù‚¤ groovy‚¾‚Æ2”{’x‚©‚Á‚½
 
 // +‚Ìê‡
 long start = System.currentTimeMillis();
@@ -68,6 +68,7 @@ long isb = endsb - startsb;
 
 System.out.println(i);
 System.out.println(isb);
+*/
 
 
 /*
