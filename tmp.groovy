@@ -6,6 +6,32 @@
 
 
 
+
+/*
+(1..100).each{
+  println Integer.toBinaryString(it)
+}
+*/
+
+/*
+// yyyymmdd
+println new Date()
+println new Date().format("yyyyMMdd")
+println new Date().format('yyyyMMdd')
+*/
+
+
+/*
+// ヒアドキュメント
+here = "ヒア"
+print """\
+改行なし
+${here}
+でかける
+"""
+*/
+
+
 /*
 // GroovyBean
 class Book
@@ -405,24 +431,30 @@ new SwingBuilder().frame(
 /*
 // クロージャテスト
 def str = "clojure"
+
 def readerClosure = {
-ttt = "aaaa"
-println str
-println ttt
+  ttt = "aaaa"
+  println str
+  println ttt
 }
+
 readerClosure()
 
 def writerClosure = {
-str = "foo" 
-ttt = "bbb"
+  str = "foo" 
+  ttt = "bbb"
 }
+
 writerClosure()
 
 println str
 println ttt
+
 readerClosure()
+
 println ttt
 */
+
 
 /*
 // Meta Object Protocol
@@ -467,7 +499,7 @@ class InterceptorImpl implements Interceptor
     return null
   }
   
-  Object afterInvoke(Object groovyExtensionObject, String name, Object[] arguments, Object be	eInvokeReturnObject)
+  Object afterInvoke(Object groovyExtensionObject, String name, Object[] arguments, Object be eInvokeReturnObject)
   {
     Object object = invokeMethod(name, arguments)
     return object
@@ -493,21 +525,26 @@ class GreetingInterceptor extends InterceptorImpl
 /*
 // expandoの例2
 def obj = [:]
-obj.greetingMessage = "Hello World"
+obj.greetingMessage = "Hell World"
 obj.greet = { println obj.greetingMessage }
+
 obj.greet()
+
 obj.message = "foo"
 println obj.message
 */
 
+
 /*
 // expandoの例
 def obj = new Expando()
-obj.greetingMessage = "Hello World"
+obj.greetingMessage = "Hell World"
 obj.greet = { println greetingMessage }
-obj.greet()
+
+obj.greet() // 出力
+
 obj.message = "foo"
-println obj.message
+println obj.message // 出力
 */
 
 
@@ -516,10 +553,12 @@ println obj.message
 class Pojo {
   def name
 }
-def pojo = new Pojo(name:"名前")
+
+def pojo = new Pojo( name:"名前" )
 println pojo.getName() // getName()が生成されている
 println pojo.name // getName()が呼ばれる
 */
+
 
 /*
 // groovyテスト
